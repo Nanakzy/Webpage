@@ -2,6 +2,10 @@ document.getElementById("contactBtn").addEventListener("click", function () {
     document.getElementById("contactForm").style.display = "flex";
 });
 
+document.getElementById("closeForm").addEventListener("click", function () {
+    document.getElementById("contactForm").style.display = "none";
+});
+
 document.getElementById("contactFormElement").addEventListener("submit", function (event) {
     event.preventDefault();
     

@@ -10,7 +10,7 @@
     <div class="container">
         <!-- Profile Section -->
         <div class="profile">
-            <img src="profile.jpg" alt="Precious Khuzwayo">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-img">
             <h1>Precious Khuzwayo</h1>
             <p>English Training | AI Productivity | Cybersecurity Awareness</p>
         </div>
@@ -53,20 +53,39 @@
         <section class="contact">
             <h2>Get in Touch</h2>
             <p>Let’s discuss how I can help you or your business.</p>
-            <button id="contactBtn">Contact Me</button>
-        </section>
 
-        <!-- Contact Form (Hidden Initially) -->
-        <div class="contact-form" id="contactForm">
-            <form id="contactFormElement">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Email</button>
-            </form>
         </div>
-    </div>
+        <div id="contactForm" class="contact-form">
+    <form>
+        <h2>Contact Me</h2>
+        <button id="contactMeButton" type="button">Contact Me</button>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+        <button type="button" id="closeForm" onclick="closeContactForm()">Close</button>
+    </form>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contactForm");
+        
+        document.getElementById("contactMeButton").addEventListener("click", function () {
+            contactForm.style.display = "flex";
+        });
 
+        document.getElementById("closeForm").addEventListener("click", function () {
+            contactForm.style.display = "none";
+        });
+    });
+</script>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Precious Khuzwayo. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
+    <script>
+    </script>
 </body>
 </html>
